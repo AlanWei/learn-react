@@ -1,13 +1,28 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import JSXDemo from "./jsx/jsx";
+import FunctionalDemo from "./components/functional";
+import ClassDemo from "./components/class";
+import StateDemo from "./hooks/state";
+import EffectDemo from "./hooks/effect";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/jsx" element={<JSXDemo />} />
+        <Route path="/component-functional" element={<FunctionalDemo text="Hello World!" />} />
+        <Route path="/component-class" element={<ClassDemo />} />
+        <Route path="/hooks-state" element={<StateDemo />} />
+        <Route path="/hooks-effect" element={<EffectDemo />} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
