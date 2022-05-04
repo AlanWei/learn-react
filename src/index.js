@@ -6,6 +6,7 @@ import FunctionalDemo from "./components/functional";
 import ClassDemo from "./components/class";
 import StateDemo from "./hooks/state";
 import EffectDemo from "./hooks/effect";
+import { Layout, Index, Invoice, SentInvoices, NotFound } from "./routes/demo";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
@@ -17,10 +18,19 @@ root.render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/jsx" element={<JSXDemo />} />
-        <Route path="/component-functional" element={<FunctionalDemo text="Hello World!" />} />
+        <Route
+          path="/component-functional"
+          element={<FunctionalDemo text="Hello World!" />}
+        />
         <Route path="/component-class" element={<ClassDemo />} />
         <Route path="/hooks-state" element={<StateDemo />} />
         <Route path="/hooks-effect" element={<EffectDemo />} />
+        <Route path="invoices" element={<Layout />}>
+          <Route index element={<Index />} />
+          <Route path=":invoiceId" element={<Invoice />} />
+          <Route path="sent" element={<SentInvoices />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

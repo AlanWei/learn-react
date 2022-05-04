@@ -8,19 +8,40 @@
   color: white;
 }
 
+.app-logo {
+  height: 232px;
+  pointer-events: none;
+}
+
 .app-header {
-  font-size: calc(12px + 2vmin);
+  font-size: 64px;
+  text-align: center;
 }
 
 .app-nav {
   margin-top: 48px;
-  width: 1152px;
-  font-size: calc(2vmin);
+  width: 1272px;
+  font-size: 32px;
   display: flex;
   justify-content: space-between;
 }
 
 .backToHome {
-  font-size: calc(2vmin);
+  font-size: 48px;
   margin-top: 16px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .app-logo {
+    animation: app-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes app-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
