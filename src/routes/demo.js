@@ -1,4 +1,4 @@
-import { Outlet, useParams } from "react-router-dom";
+import { Link, Outlet, useParams } from "react-router-dom";
 
 function Layout() {
   return (
@@ -10,7 +10,20 @@ function Layout() {
 }
 
 function Index() {
-  return <h1>Index</h1>;
+  return (
+    <div>
+      <h1>Index</h1>
+      <h2>
+        <Link to="/invoices/123">Invoice with ID</Link>
+      </h2>
+      <h2>
+        <Link to="/invoices/sent">Sent Invoice</Link>
+      </h2>
+      <h2>
+        <Link to="/invoices/hello/world">Not Found</Link>
+      </h2>
+    </div>
+  );
 }
 
 function Invoice() {
