@@ -10,11 +10,12 @@ function App() {
         <div>Learn React</div>
       </header>
       <nav className="app-nav">
-        <Link to="/jsx">JSX</Link>
-        <Link to="/component-functional">Functional Component</Link>
-        <Link to="/component-class">Class Component</Link>
-        <Link to="/hooks-state">State Hooks</Link>
-        <Link to="/hooks-effect">Effect Hooks</Link>
+        <Link className="nav-item" to="/jsx">JSX</Link>
+        <Link className="nav-item" to="/component-functional">Functional Component</Link>
+        <Link className="nav-item" to="/component-class">Class Component</Link>
+        <Link className="nav-item" to="/hooks-state">State Hooks</Link>
+        <Link className="nav-item" to="/hooks-effect">Effect Hooks</Link>
+        <Link className="nav-item" to="/context">Context</Link>
         <Link to="/invoices">React Router</Link>
       </nav>
     </div>

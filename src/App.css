@@ -20,10 +20,13 @@
 
 .app-nav {
   margin-top: 48px;
-  width: 1272px;
   font-size: 32px;
   display: flex;
   justify-content: space-between;
+}
+
+.nav-item {
+  margin-right: 36px;
 }
 
 .backToHome {
